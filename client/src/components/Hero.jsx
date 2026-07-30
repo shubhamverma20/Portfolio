@@ -107,14 +107,13 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="#" // Resume placeholder (can download dummy PDF)
-              onClick={(e) => {
-                e.preventDefault();
-                alert("Resume downloading will start in a live production environment. You can replace this link with Shubham's actual PDF.");
-              }}
+              href="/Shubham_Kumar_Tech_Resume.pdf"
+              download="Shubham_Kumar_Tech_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center space-x-2 px-6 py-3 rounded-full font-semibold border border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/10 transition-all duration-300"
+              className="inline-flex items-center space-x-2 px-6 py-3 rounded-full font-semibold border border-indigo-500/30 text-indigo-400 hover:bg-indigo-500/10 transition-all duration-300 cursor-pointer"
             >
               <Download className="w-5 h-5" />
               <span>Download Resume</span>
