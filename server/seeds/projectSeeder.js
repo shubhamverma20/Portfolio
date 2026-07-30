@@ -12,7 +12,7 @@ const defaultProjects = [
   },
   {
     title: 'Amul Kool Website',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    technologies: ['Vanilla JS', 'Tailwind CSS', 'HTML5 Canvas', 'Node.js', 'Express.js', 'SQLite3'],
     description: 'Modern landing page with responsive design.',
     github: 'https://github.com/shubhamverma20/amul-kool-rose-website',
     liveDemo: 'https://amul-kool-rose-website-chi.vercel.app/',
@@ -65,6 +65,12 @@ const seedProjects = async () => {
 
     // Clean up any existing AI Interview System projects
     await pool.query("DELETE FROM projects WHERE title = 'AI Interview System'");
+
+    // Update Amul Kool technologies in existing database records
+    await pool.query(
+      "UPDATE projects SET technologies = $1 WHERE title = 'Amul Kool Website'",
+      [['Vanilla JS', 'Tailwind CSS', 'HTML5 Canvas', 'Node.js', 'Express.js', 'SQLite3']]
+    );
 
     // 2. Check if table is empty
     const res = await pool.query('SELECT COUNT(*) FROM projects');

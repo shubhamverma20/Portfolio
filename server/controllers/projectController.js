@@ -27,7 +27,7 @@ const getOfflineProjects = () => {
       {
         _id: 'offline_3',
         title: 'Amul Kool Website',
-        technologies: ['HTML', 'CSS', 'JavaScript'],
+        technologies: ['Vanilla JS', 'Tailwind CSS', 'HTML5 Canvas', 'Node.js', 'Express.js', 'SQLite3'],
         description: 'Modern landing page with responsive design.',
         github: 'https://github.com/shubhamverma20/amul-kool-rose-website',
         liveDemo: 'https://amul-kool-rose-website-chi.vercel.app/',
