@@ -21,7 +21,7 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply transition-colors duration-305 font-sans antialiased text-slate-200 bg-slate-950;
+    @apply transition-colors duration-300 font-sans antialiased text-slate-200 bg-slate-950;
     overflow-x: hidden;
   }
   body.light {
