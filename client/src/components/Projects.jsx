@@ -57,8 +57,8 @@ const FALLBACK_PROJECTS = [
 ];
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState(FALLBACK_PROJECTS);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getProjects = async () => {
