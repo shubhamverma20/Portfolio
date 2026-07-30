@@ -14,15 +14,7 @@ if (!fs.existsSync(configDir)) {
 const getOfflineProjects = () => {
   if (!fs.existsSync(OFFLINE_FILE)) {
     const defaults = [
-      {
-        _id: 'offline_1',
-        title: 'AI Interview System',
-        technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
-        description: 'AI-powered interview preparation platform with authentication, AI-generated interview questions, dashboard, and responsive design.',
-        github: 'https://github.com/shubhamverma20/ai-interview-system',
-        liveDemo: 'https://ai-interview-prep-system.vercel.app',
-        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600'
-      },
+
       {
         _id: 'offline_2',
         title: 'FreshCart',

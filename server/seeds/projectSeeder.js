@@ -1,14 +1,7 @@
 const { pool } = require('../config/db');
 
 const defaultProjects = [
-  {
-    title: 'AI Interview System',
-    technologies: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Firebase'],
-    description: 'AI-powered interview preparation platform with authentication, AI-generated interview questions, dashboard, and responsive design.',
-    github: 'https://github.com/shubhamverma20/ai-interview-system',
-    liveDemo: 'https://ai-interview-prep-system.vercel.app',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600'
-  },
+
   {
     title: 'FreshCart',
     technologies: ['HTML', 'CSS', 'JavaScript'],
@@ -69,6 +62,9 @@ const seedProjects = async () => {
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       )
     `);
+
+    // Clean up any existing AI Interview System projects
+    await pool.query("DELETE FROM projects WHERE title = 'AI Interview System'");
 
     // 2. Check if table is empty
     const res = await pool.query('SELECT COUNT(*) FROM projects');
