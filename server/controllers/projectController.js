@@ -18,7 +18,7 @@ const getOfflineProjects = () => {
       {
         _id: 'offline_2',
         title: 'FreshCart',
-        technologies: ['HTML', 'CSS', 'JavaScript'],
+        technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase Auth', 'Razorpay'],
         description: 'Responsive e-commerce shopping website with clean UI.',
         github: 'https://github.com/shubhamverma20/FreshCart',
         liveDemo: 'https://freshcart-grocery-delivery.vercel.app/',

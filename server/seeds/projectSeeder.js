@@ -4,7 +4,7 @@ const defaultProjects = [
 
   {
     title: 'FreshCart',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase Auth', 'Razorpay'],
     description: 'Responsive e-commerce shopping website with clean UI.',
     github: 'https://github.com/shubhamverma20/FreshCart',
     liveDemo: 'https://freshcart-grocery-delivery.vercel.app/',
@@ -70,6 +70,12 @@ const seedProjects = async () => {
     await pool.query(
       "UPDATE projects SET technologies = $1 WHERE title = 'Amul Kool Website'",
       [['Vanilla JS', 'Tailwind CSS', 'HTML5 Canvas', 'Node.js', 'Express.js', 'SQLite3']]
+    );
+
+    // Update FreshCart technologies in existing database records
+    await pool.query(
+      "UPDATE projects SET technologies = $1 WHERE title = 'FreshCart'",
+      [['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase Auth', 'Razorpay']]
     );
 
     // 2. Check if table is empty
