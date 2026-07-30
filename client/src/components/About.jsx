@@ -12,7 +12,7 @@ const stats = [
   {
     icon: <Code2 className="w-6 h-6 text-cyan-400" />,
     title: 'Projects',
-    value: '5+ Completed',
+    value: '4+ Completed',
     desc: 'MERN Stack & Python Apps'
   },
   {

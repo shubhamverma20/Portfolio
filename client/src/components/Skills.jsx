@@ -21,12 +21,12 @@ const skillCategories = [
   {
     title: 'Databases',
     icon: <Database className="w-6 h-6 text-emerald-400" />,
-    skills: ['MongoDB', 'MySQL']
+    skills: ['PostgreSQL', 'MongoDB', 'MySQL']
   },
   {
     title: 'Tools & Platforms',
     icon: <Wrench className="w-6 h-6 text-orange-400" />,
-    skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Vercel', 'Netlify', 'Render', 'MongoDB Atlas']
+    skills: ['Git', 'GitHub', 'VS Code', 'Postman', 'Vercel', 'Netlify', 'Render', 'Supabase']
   },
   {
     title: 'Soft Skills',

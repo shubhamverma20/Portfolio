@@ -57,7 +57,7 @@ const Projects = () => {
           </motion.h2>
           <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto mt-4 rounded-full" />
           <p className="text-sm text-slate-400 mt-4 max-w-md mx-auto">
-            A curated showcase of applications I have built, fetched dynamically from MongoDB.
+            A curated showcase of applications I have built, fetched dynamically from PostgreSQL.
           </p>
         </div>
 
