@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "offline_1",
+    "title": "AI Interview System",
+    "technologies": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase"
+    ],
+    "description": "AI-powered interview preparation platform with authentication, AI-generated interview questions, dashboard, and responsive design.",
+    "github": "https://github.com/shubhamverma20/ai-interview-system",
+    "liveDemo": "https://ai-interview-prep-system.vercel.app",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600"
+  },
+  {
+    "_id": "offline_2",
+    "title": "FreshCart",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "description": "Responsive e-commerce shopping website with clean UI.",
+    "github": "https://github.com/shubhamverma20/FreshCart",
+    "liveDemo": "https://freshcart-grocery-delivery.vercel.app/",
+    "image": "https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=600"
+  },
+  {
+    "_id": "offline_3",
+    "title": "Amul Kool Website",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "description": "Modern landing page with responsive design.",
+    "github": "https://github.com/shubhamverma20/amul-kool-rose-website",
+    "liveDemo": "https://amul-kool-rose-website-chi.vercel.app/",
+    "image": "https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=600"
+  },
+  {
+    "_id": "offline_4",
+    "title": "Fake Headline Generator",
+    "technologies": [
+      "Python"
+    ],
+    "description": "Python application that generates random funny headlines.",
+    "github": "https://github.com/shubhamverma20/fake-headline-generator",
+    "liveDemo": "",
+    "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600"
+  },
+  {
+    "_id": "offline_5",
+    "title": "Hotel Menu Project",
+    "technologies": [
+      "Python"
+    ],
+    "description": "Console-based Hotel Billing and Menu Management System.",
+    "github": "https://github.com/shubhamverma20/hotel-menu",
+    "liveDemo": "",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600"
+  }
+]

@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+**/node_modules/
+
+# Environment files (contains passwords/secrets)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+**/.env
+
+# Build outputs
+dist/
+**/dist/
+build/
+**/build/
+
+# IDE files and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
