@@ -17,22 +17,62 @@ const GithubIcon = ({ className }) => (
   </svg>
 );
 
+const FALLBACK_PROJECTS = [
+  {
+    _id: 'fallback_1',
+    title: 'FreshCart',
+    technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase Auth', 'Razorpay'],
+    description: 'Responsive e-commerce grocery shopping website with clean UI, cart management, and online payment integration.',
+    github: 'https://github.com/shubhamverma20/FreshCart',
+    liveDemo: 'https://freshcart-grocery-delivery.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=600'
+  },
+  {
+    _id: 'fallback_2',
+    title: 'Amul Kool Website',
+    technologies: ['Vanilla JS', 'Tailwind CSS', 'HTML5 Canvas', 'Node.js', 'Express.js'],
+    description: 'Modern, highly dynamic splash landing page with interactive canvas animations and responsive design.',
+    github: 'https://github.com/shubhamverma20/amul-kool-rose-website',
+    liveDemo: 'https://amul-kool-rose-website-chi.vercel.app/',
+    image: 'https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?q=80&w=600'
+  },
+  {
+    _id: 'fallback_3',
+    title: 'Fake Headline Generator',
+    technologies: ['Python', 'NLP', 'CLI'],
+    description: 'Python application that generates random funny and engaging headlines for social media.',
+    github: 'https://github.com/shubhamverma20/fake-headline-generator',
+    liveDemo: '',
+    image: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=600'
+  },
+  {
+    _id: 'fallback_4',
+    title: 'Hotel Menu Project',
+    technologies: ['Python', 'Data Structures'],
+    description: 'Console-based Hotel Billing and Menu Management System with dynamic order calculations.',
+    github: 'https://github.com/shubhamverma20/hotel-menu',
+    liveDemo: '',
+    image: 'https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600'
+  }
+];
+
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState('');
 
   useEffect(() => {
     const getProjects = async () => {
       try {
         setLoading(true);
         const data = await fetchProjects();
-        if (data.success) {
+        if (data && data.success && Array.isArray(data.data) && data.data.length > 0) {
           setProjects(data.data);
+        } else {
+          setProjects(FALLBACK_PROJECTS);
         }
       } catch (err) {
-        setError('Failed to fetch projects. Please ensure the backend is running.');
-        console.error(err);
+        console.warn('Backend API connection unavailable, displaying client fallback projects.', err);
+        setProjects(FALLBACK_PROJECTS);
       } finally {
         setLoading(false);
       }
@@ -61,20 +101,11 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Loader, Error, or Grid */}
+        {/* Loader or Grid */}
         {loading ? (
           <div className="flex flex-col items-center justify-center py-20 space-y-4">
             <Loader2 className="w-8 h-8 text-indigo-500 animate-spin" />
-            <p className="text-slate-400 text-sm">Fetching projects database...</p>
-          </div>
-        ) : error ? (
-          <div className="text-center py-12 glass-panel rounded-2xl max-w-md mx-auto border border-red-500/20">
-            <p className="text-red-400 font-semibold mb-2">Notice</p>
-            <p className="text-xs text-slate-400 leading-relaxed px-4">{error}</p>
-          </div>
-        ) : projects.length === 0 ? (
-          <div className="text-center py-16 glass-panel rounded-2xl max-w-md mx-auto">
-            <p className="text-slate-400 text-sm">No projects stored in database yet.</p>
+            <p className="text-slate-400 text-sm">Fetching projects...</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
