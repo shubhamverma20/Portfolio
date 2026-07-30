@@ -4,6 +4,16 @@ import { Award, ShieldCheck, Zap, Server, GitBranch, Target } from 'lucide-react
 
 const achievements = [
   {
+    title: 'Cisco Virtual Internship - Python',
+    description: 'Successfully completed the Cisco Networking Academy Partner: PCAP - Programming Essentials in Python program, covering OOPs, coding logic, and file handling. (Aug 2024)',
+    icon: <Award className="w-6 h-6 text-yellow-400" />
+  },
+  {
+    title: 'Cisco Virtual Internship - Cybersecurity',
+    description: 'Gained credentials in network threat analysis, encryption models, vulnerability patching, and cybersecurity fundamentals via Cisco Academy. (Dec 2023)',
+    icon: <ShieldCheck className="w-6 h-6 text-indigo-400" />
+  },
+  {
     title: 'Full Stack MERN Developer',
     description: 'Expertise in developing highly scalable and dynamic web applications using React.js, Node.js, Express.js, and MongoDB.',
     icon: <Zap className="w-6 h-6 text-indigo-400" />
