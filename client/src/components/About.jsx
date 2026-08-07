@@ -12,7 +12,7 @@ const stats = [
   {
     icon: <Code2 className="w-6 h-6 text-cyan-400" />,
     title: 'Projects',
-    value: '4+ Completed',
+    value: '5+ Completed',
     desc: 'MERN Stack & Python Apps'
   },
   {
@@ -33,10 +33,10 @@ const About = () => {
   return (
     <section id="about" className="relative py-24 bg-slate-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-        
+
         {/* Section Title */}
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -51,7 +51,7 @@ const About = () => {
         {/* Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Text Description */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -61,7 +61,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-white font-sans">
               Who is Shubham Kumar?
             </h3>
-            
+
             <p className="text-slate-400 dark:text-slate-400 leading-relaxed text-lg">
               I am a dedicated **Bachelor of Technology (B.Tech) Computer Science Engineering** student, deeply passionate about software development and web technologies. My core expertise lies in the MERN Stack (MongoDB, Express.js, React.js, Node.js), but I am also highly comfortable with Python and classical languages like C and C++.
             </p>
@@ -78,7 +78,7 @@ const About = () => {
           </motion.div>
 
           {/* Stats Cards Grid */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -94,7 +94,7 @@ const About = () => {
               >
                 {/* Floating highlight glow on hover */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                
+
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="p-3 rounded-xl bg-slate-850 border border-slate-800">
                     {stat.icon}
