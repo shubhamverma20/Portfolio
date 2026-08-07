@@ -2,8 +2,8 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
   connectionString: process.env.PG_URI || 'postgresql://postgres:admin123@localhost:5432/portfolio',
-  // Enable SSL in production (required for hosting services like Render)
-  ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false
+  // Enable SSL (required for hosting services like Render and Supabase)
+  ssl: { rejectUnauthorized: false }
 });
 
 const connectDB = async () => {

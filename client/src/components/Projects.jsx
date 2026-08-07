@@ -19,6 +19,15 @@ const GithubIcon = ({ className }) => (
 
 const FALLBACK_PROJECTS = [
   {
+    _id: 'fallback_0',
+    title: 'TaskSync - Full Stack Task Management Application',
+    technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+    description: 'A modern Full Stack Task Management Application built with the MERN Stack.',
+    github: 'https://github.com/shubhamverma20/Task-mangement-project',
+    liveDemo: 'https://task-management-project.vercel.app',
+    image: 'https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=600'
+  },
+  {
     _id: 'fallback_1',
     title: 'FreshCart',
     technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase Auth', 'Razorpay'],

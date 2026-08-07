@@ -1,7 +1,14 @@
 const { pool } = require('../config/db');
 
 const defaultProjects = [
-
+  {
+    title: 'TaskSync - Full Stack Task Management Application',
+    technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
+    description: 'A modern Full Stack Task Management Application built with the MERN Stack.',
+    github: 'https://github.com/shubhamverma20/Task-mangement-project',
+    liveDemo: 'https://task-mangement-project.vercel.app',
+    image: 'https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=600'
+  },
   {
     title: 'FreshCart',
     technologies: ['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase Auth', 'Razorpay'],
@@ -77,6 +84,23 @@ const seedProjects = async () => {
       "UPDATE projects SET technologies = $1 WHERE title = 'FreshCart'",
       [['React', 'Vite', 'Node.js', 'Express.js', 'MongoDB', 'Firebase Auth', 'Razorpay']]
     );
+
+    // Insert TaskSync project if it doesn't exist
+    const taskSyncCheck = await pool.query("SELECT * FROM projects WHERE title = 'TaskSync - Full Stack Task Management Application'");
+    if (taskSyncCheck.rows.length === 0) {
+      await pool.query(
+        'INSERT INTO projects (title, description, technologies, github, live_demo, image) VALUES ($1, $2, $3, $4, $5, $6)',
+        [
+          'TaskSync - Full Stack Task Management Application',
+          'A modern Full Stack Task Management Application built with the MERN Stack.',
+          ['MongoDB', 'Express.js', 'React', 'Node.js'],
+          'https://github.com/shubhamverma20/Task-mangement-project',
+          'https://task-management-project.vercel.app',
+          'https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=600'
+        ]
+      );
+      console.log('TaskSync project added to PostgreSQL database.');
+    }
 
     // 2. Check if table is empty
     const res = await pool.query('SELECT COUNT(*) FROM projects');
