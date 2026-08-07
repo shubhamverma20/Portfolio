@@ -24,7 +24,7 @@ const FALLBACK_PROJECTS = [
     technologies: ['MongoDB', 'Express.js', 'React', 'Node.js'],
     description: 'A modern Full Stack Task Management Application built with the MERN Stack.',
     github: 'https://github.com/shubhamverma20/Task-mangement-project',
-    liveDemo: 'https://task-management-project.vercel.app',
+    liveDemo: 'https://task-mangement-project.vercel.app',
     image: 'https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=600'
   },
   {

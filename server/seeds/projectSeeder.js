@@ -95,7 +95,7 @@ const seedProjects = async () => {
           'A modern Full Stack Task Management Application built with the MERN Stack.',
           ['MongoDB', 'Express.js', 'React', 'Node.js'],
           'https://github.com/shubhamverma20/Task-mangement-project',
-          'https://task-management-project.vercel.app',
+          'https://task-mangement-project.vercel.app',
           'https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=600'
         ]
       );
